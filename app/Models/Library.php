@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Models\Book;
 use App\Models\User;
-use App\Models\History;
+use App\Models\BookHistory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -16,9 +16,9 @@ class Library extends Model
     /**
      * Relationship to Book
      * This returns the list of books that relates to this library
-     * @return HasMany 
+     * @return HasMany
      */
-    public function books() : HasMany 
+    public function books() : HasMany
     {
         return $this->hasMany(Book::class);
     }
@@ -26,19 +26,19 @@ class Library extends Model
     /**
      * Relationship to History
      * This returns the list of book histories
-     * @return HasMany 
+     * @return HasMany
      */
-    public function history() : HasMany 
+    public function history() : HasMany
     {
-        return $this->hasMany(History::class);
+        return $this->hasMany(BookHistory::class);
     }
 
     /**
      * Relationship to User
      * This returns the list of users belongs to this library
-     * @return HasMany 
+     * @return HasMany
      */
-    public function users() : HasMany 
+    public function users() : HasMany
     {
         return $this->hasMany(User::class, 'library_id');
     }

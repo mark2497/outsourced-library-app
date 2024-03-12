@@ -14,19 +14,14 @@ use Illuminate\Http\RedirectResponse;
 
 class BookController extends Controller
 {
-    private $bookService, $historyService;
-
     /**
      * Service binding for this controller
      *
      * @param BookService $bookService
      * @param HistoryService $historyService
      */
-    public function __construct(BookService $bookService, HistoryService $historyService)
-    {
-        $this->bookService = $bookService;
-        $this->historyService = $historyService;
-    }
+    public function __construct(private BookService $bookService, private HistoryService $historyService)
+    {}
     
     /**
      * Process the borrowing of the book

@@ -16,7 +16,7 @@ class CreateBookHistoryTable extends Migration
      */
     public function up()
     {
-        Schema::create('book_history', function (Blueprint $table) {
+        Schema::create('book_histories', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Library::class)
                 ->references('id')

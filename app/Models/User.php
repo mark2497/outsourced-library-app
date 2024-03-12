@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\History;
+use App\Models\BookHistory;
 use App\Models\Library;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -50,9 +50,9 @@ class User extends Authenticatable
     /**
      * Relationship to Library
      * This returns library where the user is belong
-     * @return BelongsTo 
+     * @return BelongsTo
      */
-    public function library() : BelongsTo 
+    public function library() : BelongsTo
     {
         return $this->belongsTo(Library::class);
     }
@@ -60,10 +60,10 @@ class User extends Authenticatable
     /**
      * Relationship to Book History
      * This returns borrow history of the book that relates to user
-     * @return BelongsTo 
+     * @return BelongsTo
      */
     public function history(): HasMany
     {
-        return $this->hasMany(History::class);
+        return $this->hasMany(BookHistory::class);
     }
 }

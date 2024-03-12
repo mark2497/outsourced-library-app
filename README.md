@@ -33,7 +33,10 @@ $ npm install
 $ npm update
 ```
 
-**Step 4**: if you want a fresh start for the project, remove the `.git` folder
+**Step 4**: run the migration and seeder code to have a data in your local
+```sh
+$ php artisan migrate:fresh --seed
+```
 
 
 ## About Laravel
