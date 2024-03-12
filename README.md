@@ -7,12 +7,12 @@ Laravel 10
 **Step 1**: clone the project with git
 
 ```sh
-$ git clone https://github.com/mark2497/outsourced-library.git
+$ git clone https://github.com/mark2497/outsourced-library-app.git
 ```
 
-**Step 2**: go into the `outsourced-library` folder and run composer
+**Step 2**: go into the `outsourced-library-app` folder and run composer
 ```sh
-$ cd outsourced-library
+$ cd outsourced-library-app
 $ composer install
 ```
 
